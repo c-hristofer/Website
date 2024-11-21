@@ -52,7 +52,7 @@ th, td {
 }
 
 th {
-    background-color: rgba(255, 69, 0, 0.8); /* Orange for headers */
+    background-color: rgba(255, 0, 0, 0.4); /* Orange for headers */
     color: white; /* White text */
     font-weight: bold; /* Bold font for headers */
     text-transform: uppercase; /* ALL CAPS for headers */
