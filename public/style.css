@@ -1,4 +1,4 @@
-body {
+body{
     /* Set background photo and adjust sizing */
     display: flex;
     flex-direction: column;
@@ -10,30 +10,45 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     color: white;
+    padding: 20px; /* Add padding for smaller screens */
+    box-sizing: border-box; /* Include padding in width calculations */
 }
 
 h1 {
     color: #f0f0f0;
     text-align: center;
-    font-size: 3rem;
-    margin-top: -10%; /* Keep text a bit higher than center */
-    margin-bottom: 60px; /* Separate title from table */
+    font-size: 2.5rem; /* Large font for desktop */
+    margin-top: 20px; /* Keep text a bit higher than center */
+    margin-bottom: 20px; /* Separate title from table */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
-table {
-    width: 70%;
-    border-collapse: collapse;
-    table-layout: fixed; /* Ensure all columns have equal width */
-    background-color: rgba(0, 0, 0, .4); /* Semi-transparent background */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
-    border-radius: 15px; /* Rounded corners */
-    overflow: hidden; /* Ensures content stays within rounded edges */
+b {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    display: block;
+    text-align: center;
 }
+
+table {
+    width: 100%; /* Full width on smaller screens */
+    max-width: 1200px;
+    border-collapse: collapse;
+    table-layout: fixed; /* Prevents overflow */
+    background-color: rgba(0, 0, 0, .4); /* Semi-transparent background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 15px; /* Rounded corners */
+    overflow: hidden; /* Rounded edges */
+    margin-top: 20px;
+}
+
 th, td {
-    padding: 15px;
+    padding: 10px;
     text-align: center;
     border: 1px solid rgba(255, 255, 255, 0.2); /* Softer border */
+    word-wrap: break-word; /* Allow content to wrap in small cells */
+    font-size: 1rem; /* Scales text size based on screen size */
 }
 
 th {
@@ -43,9 +58,15 @@ th {
     text-transform: uppercase; /* ALL CAPS for headers */
 }
 
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
 td {
     background-color: rgba(255, 255, 255, 0.2); /* Light transparent cells */
     transition: background-color 0.3s ease; /* Smooth transition when hovering */
+    overflow-wrap: break-word;
 }
 
 tr:nth-child(even) td {
@@ -58,5 +79,24 @@ tr:nth-child(odd) td {
 
 tr td:hover {
     background-color: rgba(255, 255, 255, 0.4); /* Highlight on hover */
-    cursor: pointer; /* Show Pointer cursor */
+    cursor: pointer; /* Show pointer cursor */
+}
+
+img {
+    width: 100px;
+    align-content: center;
+}
+
+.reccomendations {
+    font-size: medium;
+    font-weight: 500;
+    width: 100%; /* Full width on smaller screens */
+    max-width: 1200px;
+    border-collapse: collapse;
+    table-layout: fixed; /* Prevents overflow */
+    background-color: rgba(255, 255, 255, .2); /* Semi-transparent background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 15px; /* Rounded corners */
+    overflow: hidden; /* Rounded edges */
+    margin-top: 20px;
 }
