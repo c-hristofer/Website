@@ -1,0 +1,62 @@
+body {
+    /* Set background photo and adjust sizing */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url(background.jpg) no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+h1 {
+    color: #f0f0f0;
+    text-align: center;
+    font-size: 3rem;
+    margin-top: -10%; /* Keep text a bit higher than center */
+    margin-bottom: 60px; /* Separate title from table */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+table {
+    width: 70%;
+    border-collapse: collapse;
+    table-layout: fixed; /* Ensure all columns have equal width */
+    background-color: rgba(0, 0, 0, .4); /* Semi-transparent background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    border-radius: 15px; /* Rounded corners */
+    overflow: hidden; /* Ensures content stays within rounded edges */
+}
+th, td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Softer border */
+}
+
+th {
+    background-color: rgba(255, 69, 0, 0.8); /* Orange for headers */
+    color: white; /* White text */
+    font-weight: bold; /* Bold font for headers */
+    text-transform: uppercase; /* ALL CAPS for headers */
+}
+
+td {
+    background-color: rgba(255, 255, 255, 0.2); /* Light transparent cells */
+    transition: background-color 0.3s ease; /* Smooth transition when hovering */
+}
+
+tr:nth-child(even) td {
+    background-color: rgba(255, 255, 255, 0.1); /* Alternate row coloring */
+}
+
+tr:nth-child(odd) td {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+tr td:hover {
+    background-color: rgba(255, 255, 255, 0.4); /* Highlight on hover */
+    cursor: pointer; /* Show Pointer cursor */
+}
